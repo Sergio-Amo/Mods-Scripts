@@ -1,0 +1,8 @@
+/*Hide Vivaldi Button*/
+#main > div.mainbar > div > button.vivaldi {display:none}
+
+#main > div.mainbar > .toolbar.toolbar-mainbar {
+    padding: 0 calc(96px / var(--uiZoomLevel)) 0 0 !important;
+    /*for mac padding: 0 0 0 calc(96px / var(--uiZoomLevel)) !important;*/
+    min-height: calc(35px / var(--uiZoomLevel)) !important;
+}
