@@ -1,0 +1,38 @@
+/*Make it behave like an overlay*/
+#tabs-tabbar-container.left {
+  /*Collapse speed*/
+  transition: width 0.14s ease-out, height 25ms ease-out !important;
+  position: absolute !important;
+  height: 100%;
+  /*background: var(--colorBg);*/
+  z-index: 1;
+  /*border-right: 1px solid var(--colorBorder);*/
+  backdrop-filter: var(--backgroundBlur); /*temp fix v.3001.3*/
+}
+/*Changing the width when NOT hovering lets you drag the tab column to 
+* select the width you want went the tabs are extended using the built-in drag
+while the no-app-dragging property prevents resize while dragging tabs around */
+#browser:not(.no-app-dragging):not(.fullscreen) > #main > .inner #tabs-tabbar-container.left:not(:hover):not(.active) {
+  width: 30px !important;
+}
+/*This will adjust the width when there's too many tabs and the scrollbar is visible
+* Only works if sidebarhelper.js is used */
+#browser:not(.no-app-dragging):not(.fullscreen) > #main > .inner #tabs-tabbar-container.left:not(:hover):not(.active):has(#tabs-container.overflow) {
+  width: 43px !important;
+}
+
+/*#browser:not(.no-app-dragging)*/
+
+/*#tabs-tabbar-container.left:hover {
+  /*Expand speed*/
+  /*transition: width 0.12s ease-out;*/
+/*}*/
+
+/*Adjust the content of the site to the collapsed size of the tabbar*/
+#browser.tabs-left:not(.fullscreen) div.tabbar-wrapper {
+  /*transition: width 0.1s ease-in;*/
+  width: 30px !important;
+}
+#browser.tabs-left:not(.fullscreen) div.tabbar-wrapper:has(#tabs-container.overflow) {
+  width: 43px !important;
+}
