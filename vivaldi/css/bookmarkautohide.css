@@ -1,0 +1,24 @@
+.bookmark-bar {
+  position: absolute; /*Behaves like an overlay*/
+  top: 34px;
+  width: 100%;
+  z-index: 3;
+  /*Height: 0 May seem unnecesary but it fixes glithcy behavior when the bookmarkBar is
+  * full and you want to drag the window using the zone near the min,restore, close buttons*/
+  height: 0 !important;
+  overflow: hidden;
+  -webkit-transform: translateY(-29px) !important;
+  /*the 0.2 delay prevent from closing when moving from mainbar to bookmarkbar as app-region:drag breaks the hover event*/
+  transition: transform 0.12s 0.23s, height 0s 0.35s;
+}
+
+.bookmark-bar:hover,
+.bookmark-bar:focus-within,
+.mainbar:hover ~ .bookmark-bar {
+  /*focus-within prevents bar from closing when navigating a bookmarks folder*/
+  height: 28px !important;
+  -webkit-transform: translateY(0) !important;
+  transition: transform 0.12s;
+}
+/* Fix overlap */
+#main > .mainbar {z-index: 4}
