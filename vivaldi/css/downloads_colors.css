@@ -1,0 +1,13 @@
+/* colorful download progress button */
+.button-toolbar > div.progress .progress {background-color: black !important;}
+
+.button-toolbar > div.progress .loaded:not([style='width: 0%']) {background-color: fuchsia; transition: background-color 500ms linear 0s !important;}
+.button-toolbar > div.progress .loaded[style^='width: 2']:not([style^='width: 2.']) {background-color: darkorange;}
+.button-toolbar > div.progress .loaded[style^='width: 3']:not([style^='width: 3.']) {background-color: orange;}
+.button-toolbar > div.progress .loaded[style^='width: 4']:not([style^='width: 4.']) {background-color: gold;}
+.button-toolbar > div.progress .loaded[style^='width: 5']:not([style^='width: 5.']) {background-color: yellow;}
+.button-toolbar > div.progress .loaded[style^='width: 6']:not([style^='width: 6.']) {background-color: greenyellow;}
+.button-toolbar > div.progress .loaded[style^='width: 7']:not([style^='width: 7.']) {background-color: lawngreen;}
+.button-toolbar > div.progress .loaded[style^='width: 8']:not([style^='width: 8.']) {background-color: deepskyblue;}
+.button-toolbar > div.progress .loaded[style^='width: 9']:not([style^='width: 9.']) {background-color: cyan;}
+/*.button-toolbar > button.downloads .progress .loaded[style^='width: 100'] {background-color: lightcyan !important;}*/
