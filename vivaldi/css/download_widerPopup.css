@@ -1,0 +1,7 @@
+.download-popout.button-popup {
+	width: 400px;
+}
+/*Adjust its location*/
+.button-popup-center:before {
+    left: 43.8%;
+}
