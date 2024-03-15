@@ -1,0 +1,23 @@
+/* Omnibox drop-down translucency */
+.OmniDropdown {
+    background: var(--colorBgAlpha);
+    backdrop-filter: blur(10px);
+}
+
+/* Quick command menu translucency */
+#modal-bg {
+    background-color: var(--colorBgAlphaHeavy);
+    backdrop-filter: blur(10px);
+}
+
+/* Sets the background color to any non-selected 
+ * element of the quick command menu to transparent */
+#modal-bg *:not([data-selected]) {
+    background-color: rgba(0,0,0,0)!important;
+}
+
+/* New tab and trash fix for whiteish background */
+.toolbar-tabbar > .button-toolbar > button,
+.toolbar-tabbar > .toolbar-group > .button-toolbar > button {
+    filter: drop-shadow(0px 0px 4px black);
+}
