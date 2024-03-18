@@ -1,0 +1,13 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = vivaldi
+Target = vivaldi-stable
+Target = vivaldi-snapshot
+
+[Action]
+Description = Re-enabling vivaldi js mods.
+When = PostTransaction
+Exec = /run/media/sdar/Storage_2/config/vivaldiMods/MODS/Auto/vivaldi_update.sh
+NeedsTargets

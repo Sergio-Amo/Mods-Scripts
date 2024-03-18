@@ -8,6 +8,10 @@
 
 ## Instructions
 
+### Automatic mode (Arch)
+
+If you are using arch there's an automatic way to enable the vivaldi mods without having to re-enable them after every vivaldi update, for further instructions go to the auto folder of this repository.
+
 ### Manual mode and all OS
 For all OS, find your vivaldi `window.html` file, the easiest way to find it navigating to `vivaldi://about/` and checking the `Executable Path` value.
 
